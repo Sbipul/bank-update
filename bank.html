@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1 class="text-4xl text-center pt-8">Your Bank <span class="text-purple-600">statement</span></h1>
+    </header>
+    <main>
+        <!-- money and transection  -->
+        <div class="grid grid-cols-3 gap-4 mx-auto w-3/4 mt-10">
+            <div class="p-8 bg-green-200 rounded">
+                <h1 class="text-5xl">$<span id="deposit-last">00</span></h1>
+                <h1 class="text-3xl">Deposit</h1>
+            </div>
+            <div class="p-8 bg-red-200 rounded">
+                <h1 class="text-5xl">$<span id="withdrawLast">00</span></h1>
+                <h1 class="text-3xl">Withdraw</h1>
+            </div>
+            <div class="p-8 bg-yellow-200 rounded">
+                <h1 class="text-5xl">$<span id="balance">1200</span> </h1>
+                <h1 class="text-3xl">Balance</h1>
+            </div>
+        </div>
+        <!-- deposit and withdraw  -->
+        <div class="grid grid-cols-2 gap-4 mx-auto w-3/4 mt-10">
+            <div class="p-8 bg-purple-400 rounded">
+                <input class="mb-6 block px-7 py-3 rounded" type="text" placeholder="$ Your amount" id="deposit-amount">
+                <button id="deposit" class="border-2 px-7 py-2 bg-blue-300 rounded">Deposit</button>
+            </div>
+            <div class="p-8 bg-pink-400 rounded">
+                <input class="mb-6 block px-7 py-3 rounded" type="text" placeholder="$ Your amount" id="withdraw-amount">
+                <button id="withdraw" class="border-2 px-7 py-2 bg-blue-300 rounded">Withdraw</button>
+            </div>
+        </div>
+    </main>
+    <script src="bank.js"></script>
+</body>
+</html>
